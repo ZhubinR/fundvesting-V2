@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.customScroll::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+.customScroll::-webkit-scrollbar-thumb {
+  @apply bg-[#373a58] dark:bg-[#b4b4b4] rounded-3xl
+
+}
+.customScroll::-webkit-scrollbar-track {
+  @apply bg-transparent rounded-3xl
+}
+
+.customScrollHorizontal::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+.customScrollHorizontal::-webkit-scrollbar-thumb {
+  @apply bg-[#373a58] dark:bg-[#b4b4b4] rounded-3xl
+}
+.customScrollHorizontal::-webkit-scrollbar-track {
+  @apply bg-transparent
+
+}
+.rmdp-container {
+  width: 80% !important;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: "fundvesting-font";
+  src: url(../../public/fonts/DANA-LIGHT.woff2) format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "fundvesting-font";
+  src: url(../../public/fonts/DANA-REGULAR.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "fundvesting-font";
+  src: url(../../public/fonts/DANA-MEDIUM.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "fundvesting-font";
+  src: url(../../public/fonts/DANA-DEMIBOLD.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "fundvesting-font";
+  src: url(../../public/fonts/DANA-EXTRABOLD.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "fundvesting-font";
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+rect {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+
+.recharts-text {
+  @apply dark:!fill-black !fill-white
+
+}
+.recharts-cartesian-grid-horizontal {
+  
+  stroke-dasharray: 10 !important;
+}
+.recharts-cartesian-grid-horizontal line {
+  @apply !stroke-[#414155] dark:!stroke-[#afafaf]
+  /* stroke: #3D3E5C !important; */
+}
+.recharts-rectangle.recharts-tooltip-cursor {
+  fill: rgba(255, 255, 255, 0.01) !important;
+}
+.recharts-yAxis  {
+  transform: translateX(-46px);
+}
+.recharts-rectangle:hover {
+  transition: all .3s ease-in !important;
+}
+.recharts-rectangle:hover {
+  fill: #FF7B01 !important;
+}
+.recharts-surface {
+  overflow: visible !important;
+}
+.blogContent p {
+ @apply text-[16px] text-neutral-600 mb-2 text-justify leading-7
+}
+.blogContent p img{
+ @apply flex items-center justify-center min-w-full
+}
+.blogContent ul ,
+.blogContent ol {
+  @apply text-[16px] list-disc text-white dark:text-darkBackground-500
+}
+.blogContent h2 {
+  @apply text-2xl font-semibold text-white dark:text-background-500
+}
+.blogContent h3 {
+  @apply text-[20px] font-medium text-white dark:text-background-500
+}
+.blogContent img {
+  @apply w-full rounded-2xl object-center object-cover h-auto max-w-[700px] my-8
+}
+
+.max-width-transition {
+  transition: max-width .6s ease-in;
+  max-width: 84px;
+}
+.max-width-transition:hover {
+  transition: max-width .6s ease-in;
+  max-width: 1000px;
+}
