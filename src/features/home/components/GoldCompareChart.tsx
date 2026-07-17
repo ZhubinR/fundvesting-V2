@@ -122,7 +122,7 @@ export function GoldCompareChart({
         <BoxTitle titleText={title} textSize="16px" />
         <BtnOutline slug="/fundBar" text="صفحه جامع" />
       </div>
-      <div className="overflow-x-scroll customScrollHorizontal lg:overflow-visible">
+      <div className="overflow-x-scroll customScrollHorizontal">
         <div className="xl:h-[400px] h-[300px] mb-2 p-1 min-w-[1050px]">
           <ResponsiveContainer className="min-w-[1050px]">
             <BarChart data={chartData} margin={{ top: 20, right: 20, left: 20, bottom: 20 }}>
